@@ -1,0 +1,24 @@
+{
+  "name": "hyunjang-rebuild",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "data": "node scripts/make-data.mjs",
+    "dev": "node scripts/make-data.mjs && next dev",
+    "build": "node scripts/make-data.mjs && next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "firebase": "^12.10.0",
+    "jose": "^5.9.6",
+    "leaflet": "^1.9.4",
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.47",
+    "tailwindcss": "3.4.14"
+  }
+}

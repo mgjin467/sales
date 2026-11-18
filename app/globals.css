@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --a-bg: #fff;
+  --a-brand: #c2410c;
+  --a-brand-deep: #9a3412;
+  --a-brand-soft: #fff7ed;
+  --a-canvas: #f2f2f4;
+  --a-ink-1: #171717;
+  --a-ink-2: #404040;
+  --a-ink-3: #525252;
+  --a-ink-4: #737373;
+  --a-line: #e5e5e5;
+  --a-surface: #fafafa;
+  --a-card-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 6px 20px rgba(0, 0, 0, 0.05);
+  --safe-bottom: max(env(safe-area-inset-bottom, 0px), var(--safe-area-inset-bottom, 0px));
+  --tab-gap: max(12px, env(safe-area-inset-bottom, 0px));
+  --tab-h: calc(var(--tab-gap) + 60px);
+}
+
+html,
+body {
+  background: var(--a-bg);
+  color: var(--a-ink-2);
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 15px;
+}
+
+html {
+  scrollbar-gutter: stable;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding-left: env(safe-area-inset-left, 0);
+  padding-right: env(safe-area-inset-right, 0);
+  overflow-x: hidden;
+}
+
+.glass-tab {
+  background: color-mix(in srgb, var(--a-bg) 82%, transparent);
+  border: 1px solid color-mix(in srgb, #fff 70%, transparent);
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.7), 0 0 0 0.5px rgba(0, 0, 0, 0.06), 0 10px 30px rgba(0, 0, 0, 0.12);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+}
+
+.ohj-cluster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: #c2410c;
+  color: #fff;
+  font: 700 13px/1 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+  box-shadow: 0 0 0 4px rgba(194, 65, 12, 0.25), 0 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.ohj-pop {
+  font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+  min-width: 200px;
+}
+.ohj-pop p {
+  margin: 0;
+}
+.ohj-pop-t {
+  font-weight: 700;
+  font-size: 14px;
+  color: #171717;
+}
+.ohj-pop-a {
+  margin-top: 2px !important;
+  font-size: 12.5px;
+  color: #525252;
+}
+.ohj-pop-m {
+  margin-top: 6px !important;
+  font-size: 12px;
+  color: #737373;
+}
+.ohj-pop-b {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+.ohj-pop-b button {
+  flex: 1;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid #9a3412;
+  background: #fff;
+  color: #9a3412;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.ohj-pop-b button.on,
+.ohj-pop-b button[data-act='open'] {
+  background: #9a3412;
+  color: #fff;
+}
+.leaflet-container {
+  font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
